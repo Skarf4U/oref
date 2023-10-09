@@ -7,6 +7,7 @@ app.use(cors());
 const axios = require("axios"); // Make sure to install axios if you haven't already
 
 const apiUrl = process.env.API_URL;
+console.log(apiUrl);
 
 app.get("/api", async (req, res) => {
   try {

@@ -10,11 +10,17 @@ function App() {
     fetch("/api")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // Log the API response
+        // Log the API response
+        console.log(data);
+
+        // Set the backend data
         setBackendData(data);
+
+        // Set the displayed alerts to the first 10 alerts
+        setDisplayedAlerts(data.slice(0, alertsToShow));
       })
       .catch((error) => {
-        console.log(error); // Log any fetch errors
+        console.error(error); // Log any fetch errors
       });
   }, []);
 
