@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
+app.use(cors());
 const axios = require("axios"); // Make sure to install axios if you haven't already
 
 app.get("/api", async (req, res) => {
