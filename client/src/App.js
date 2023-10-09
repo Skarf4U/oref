@@ -14,7 +14,7 @@ function App() {
         setBackendData(data);
       })
       .catch((error) => {
-        console.error(error); // Log any fetch errors
+        console.log(error); // Log any fetch errors
       });
   }, []);
 
